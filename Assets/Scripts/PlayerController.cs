@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
+    public GameObject projectilPrefab;
+
     private Vector3 offset = new Vector3(0, 0, 0);
     void Start()
     {
@@ -25,6 +27,11 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
 
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            Instantiate(projectilPrefab, transform.position,
+           gameObject.transform.rotation);
 
+        }
     }
 }
