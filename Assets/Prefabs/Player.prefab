@@ -454,6 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb524a099824aec45a6acda7bc627654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilPrefab: {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536,
+    type: 3}
 --- !u!54 &4246919132259774272
 Rigidbody:
   m_ObjectHideFlags: 0

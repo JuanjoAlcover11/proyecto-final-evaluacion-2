@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 3104203327244242497}
   - component: {fileID: -2257173094857344425}
   - component: {fileID: 7331956388062374939}
+  - component: {fileID: 7252971305763310088}
   m_Layer: 0
   m_Name: TankFree_Red
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +210,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2a907b605cc1a4a8763c5166fdc0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &7252971305763310088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503318476722469206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57daf302aaeb94840a39094183a5d852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3745786531496338126

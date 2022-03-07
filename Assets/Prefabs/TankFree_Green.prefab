@@ -178,9 +178,10 @@ GameObject:
   - component: {fileID: -8429323250366891179}
   - component: {fileID: 3386107729417690311}
   - component: {fileID: 4859052402251239161}
+  - component: {fileID: -945343842432804034}
   m_Layer: 0
   m_Name: TankFree_Green
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2a907b605cc1a4a8763c5166fdc0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
+  speed: 5
 --- !u!65 &3386107729417690311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -294,6 +295,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-945343842432804034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354916976622783175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57daf302aaeb94840a39094183a5d852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6224531817163165255
 GameObject:
   m_ObjectHideFlags: 0

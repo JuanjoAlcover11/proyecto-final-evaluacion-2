@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2302577631212875841}
   - component: {fileID: 7836717825834629032}
   - component: {fileID: -3251626377539497461}
+  - component: {fileID: -1829272815352495108}
+  - component: {fileID: 4416777018798923636}
   m_Layer: 0
   m_Name: "\u0421TF_Missile_Blue"
   m_TagString: Untagged
@@ -92,5 +94,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91100622dd60b2143b973e1706884beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-1829272815352495108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7090710131271465290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.066178165, y: 0.0661782, z: 0.27574235}
+  m_Center: {x: 0, y: -0.000000016763806, z: 0.13787118}
+--- !u!114 &4416777018798923636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7090710131271465290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf710cb080bd04547857350159dbf8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
