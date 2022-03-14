@@ -225,6 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57daf302aaeb94840a39094183a5d852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  misilPrefab: {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536,
+    type: 3}
+  enemyPrefab: {fileID: 3503318476722469206}
+  playerPrefab: {fileID: 3617877702541241804, guid: 3f634e800b282dd488309c4d1b1f6b92,
+    type: 3}
 --- !u!1 &3745786531496338126
 GameObject:
   m_ObjectHideFlags: 0

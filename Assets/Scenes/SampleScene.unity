@@ -123,19 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &476087424
+--- !u!1001 &74648665
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3670692939656236464, guid: 3f634e800b282dd488309c4d1b1f6b92,
+    - target: {fileID: -2008115998187390404, guid: 3f634e800b282dd488309c4d1b1f6b92,
         type: 3}
-      propertyPath: projectilPrefab
-      value: 
-      objectReference: {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536,
-        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3126029170948807293, guid: 3f634e800b282dd488309c4d1b1f6b92,
         type: 3}
       propertyPath: m_RootOrder
@@ -431,7 +430,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bac5b3447e1cd7d468ba525e4e5250fa, type: 2}
+  - {fileID: 2100000, guid: 7843873bd9c3b8043a0ee72ad1c16c27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -522,3 +521,7 @@ MonoBehaviour:
   - {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
   - {fileID: 3354916976622783175, guid: 997823ade0e2fc249a876fa159f69cc3, type: 3}
   - {fileID: 1013459266845585946, guid: ae98f3b2f9fb19e4dba07742ad8d6f4d, type: 3}
+  PowerUps:
+  - {fileID: 100012, guid: f9f38f77edcc4364bbe69808863d0c83, type: 3}
+  - {fileID: 100004, guid: 9a8ab42d6f1b3a94e92fe881e0e867c6, type: 3}
+  - {fileID: 100004, guid: 034e51e6d8986d04795f48b487231687, type: 3}

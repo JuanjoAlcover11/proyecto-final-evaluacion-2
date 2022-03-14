@@ -17,7 +17,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        transform.Translate(direction * speed * Time.deltaTime);
+        //Vector3 direction = (player.transform.position - transform.position).normalized;
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.LookAt(player.transform.position);
     }
+
 }

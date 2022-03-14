@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilPrefab;
 
     private Vector3 offset = new Vector3(0, 0, 0);
+
+    private bool hasPowerUp;
+    private float powerUpSpeed = 20f;
+    private float powerUpTimer = 5f;
+    public bool GameOver;
     void Start()
     {
         transform.position = offset;
@@ -27,11 +32,29 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
 
-        if (Input.GetKeyDown(KeyCode.RightControl))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilPrefab, transform.position,
            gameObject.transform.rotation);
 
+        }
+    }
+    private IEnumerator PowerupCountDown()
+    {
+        for (int i = 0; i < powerUpTimer; i++)
+        {
+            yield return new WaitForSeconds(2);
+            //velocidad = powerUpSpeed;
+        }
+        hasPowerUp = false;
+    }
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Powerup"))
+        {
+            hasPowerUp = true;
+            StartCoroutine(PowerupCountDown());
+            Destroy(otherCollider.gameObject);
         }
     }
 }

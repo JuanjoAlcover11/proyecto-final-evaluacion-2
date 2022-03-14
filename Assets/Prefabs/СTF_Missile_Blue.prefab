@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4416777018798923636}
   m_Layer: 0
   m_Name: "\u0421TF_Missile_Blue"
-  m_TagString: Untagged
+  m_TagString: Proyectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7090710131271465290}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.066178165, y: 0.0661782, z: 0.27574235}
