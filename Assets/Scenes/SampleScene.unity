@@ -521,7 +521,6 @@ MonoBehaviour:
   - {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
   - {fileID: 3354916976622783175, guid: 997823ade0e2fc249a876fa159f69cc3, type: 3}
   - {fileID: 1013459266845585946, guid: ae98f3b2f9fb19e4dba07742ad8d6f4d, type: 3}
-  PowerUps:
-  - {fileID: 100012, guid: f9f38f77edcc4364bbe69808863d0c83, type: 3}
-  - {fileID: 100004, guid: 9a8ab42d6f1b3a94e92fe881e0e867c6, type: 3}
-  - {fileID: 100004, guid: 034e51e6d8986d04795f48b487231687, type: 3}
+  Coins:
+  - {fileID: 5044672308711046725, guid: 72408a73f945f8f4e96bd7367b46b737, type: 3}
+  - {fileID: 1207350036756415781, guid: 9cf39df4a1db15d4f8a985f46d345d35, type: 3}

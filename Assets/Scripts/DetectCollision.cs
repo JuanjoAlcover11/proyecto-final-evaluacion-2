@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-
+    private Enemy enemyScript;
     private void OnCollisionEnter(Collision otherCollider)
     {
 
@@ -16,6 +16,7 @@ public class DetectCollision : MonoBehaviour
         if (otherCollider.gameObject.CompareTag("Player"))
         {
             Destroy(otherCollider.gameObject);
+            enemyScript.gameOver = true;
         }        
     }
 }

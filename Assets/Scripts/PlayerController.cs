@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float velocidad = 8f;
-    private float turnSpeed = 100f;
+    private float velocidad = 10f;
+    private float turnSpeed = 150f;
 
     private float horizontalInput;
     private float verticalInput;
@@ -14,10 +14,6 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 offset = new Vector3(0, 0, 0);
 
-    private bool hasPowerUp;
-    private float powerUpSpeed = 20f;
-    private float powerUpTimer = 5f;
-    public bool GameOver;
     void Start()
     {
         transform.position = offset;
@@ -37,24 +33,6 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilPrefab, transform.position,
            gameObject.transform.rotation);
 
-        }
-    }
-    private IEnumerator PowerupCountDown()
-    {
-        for (int i = 0; i < powerUpTimer; i++)
-        {
-            yield return new WaitForSeconds(2);
-            //velocidad = powerUpSpeed;
-        }
-        hasPowerUp = false;
-    }
-    private void OnTriggerEnter(Collider otherCollider)
-    {
-        if (otherCollider.gameObject.CompareTag("Powerup"))
-        {
-            hasPowerUp = true;
-            StartCoroutine(PowerupCountDown());
-            Destroy(otherCollider.gameObject);
         }
     }
 }

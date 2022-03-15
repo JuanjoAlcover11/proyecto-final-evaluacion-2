@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] Enemies;
-    public GameObject[] PowerUps;
+    public GameObject[] Coins;
     private float zRange = 18f;
     private float xRange = 32f;
     private float startTime = 1f;
@@ -13,10 +13,12 @@ public class SpawnManager : MonoBehaviour
     private float startTime2 = 10f;
     private float repeatRate2 = 10f;
 
+    private Enemy enemyScript;
+
     void Start()
     {
         InvokeRepeating("SpawnEnemy", startTime, repeatRate);
-        InvokeRepeating("SpawnPowerUp", startTime2, repeatRate2);
+        InvokeRepeating("SpawnCoins", startTime2, repeatRate2);
     }
     public Vector3 RandomSpawnPosition()
     {
@@ -24,7 +26,6 @@ public class SpawnManager : MonoBehaviour
         float randomZ = Random.Range(-zRange, zRange);
         return new Vector3(randomX, 0, randomZ);
     }
-
     public void SpawnEnemy()
     {
         int randomIndex = Random.Range(0, Enemies.Length);
@@ -32,11 +33,10 @@ public class SpawnManager : MonoBehaviour
         Enemies[randomIndex].transform.rotation);
     }
 
-    public void SpawnPowerUp()
+    public void SpawnCoins()
     {
-        int randomIndex = Random.Range(0, PowerUps.Length);
-        Instantiate(PowerUps[randomIndex], RandomSpawnPosition(),
-        PowerUps[randomIndex].transform.rotation);
+        int randomIndex = Random.Range(0, Coins.Length);
+        Instantiate(Coins[randomIndex], RandomSpawnPosition(),
+        Coins[randomIndex].transform.rotation);
     }
-
 }
