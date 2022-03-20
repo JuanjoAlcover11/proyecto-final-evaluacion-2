@@ -7,20 +7,20 @@ public class Enemy : MonoBehaviour
     private Rigidbody enemyRigidbody;
     private GameObject player;
     public float speed = 6;
-    public bool gameOver;
+    private GameManager gameManagerScript;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
-        gameOver = false;
+        gameManagerScript = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver)
+        if (!gameManagerScript.gameOver)
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             transform.LookAt(player.transform.position);

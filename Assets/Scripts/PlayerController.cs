@@ -14,9 +14,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 offset = new Vector3(0, 0, 0);
 
+    private AudioSource Audio;
+    public AudioClip coinClip;
+    public AudioClip blastClip;
+
     void Start()
     {
         transform.position = offset;
+        Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,7 +37,15 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilPrefab, transform.position,
            gameObject.transform.rotation);
+            Audio.PlayOneShot(blastClip, 1);
 
+        }
+    }
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Coin"))
+        {
+            Audio.PlayOneShot(coinClip, 1);
         }
     }
 }

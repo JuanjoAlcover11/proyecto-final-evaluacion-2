@@ -443,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilPrefab: {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536,
     type: 3}
+  coinClip: {fileID: 8300000, guid: 7289f712bfad4a44186e7e8a6b149074, type: 3}
 --- !u!54 &4246919132259774272
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,15 +10,16 @@ public class SpawnManager : MonoBehaviour
     private float xRange = 32f;
     private float startTime = 1f;
     private float repeatRate = 3f;
-    private float startTime2 = 10f;
-    private float repeatRate2 = 10f;
+    private float startTime2 = 5f;
+    private float repeatRate2 = 5f;
 
-    private Enemy enemyScript;
+    private GameManager gameManagerScript;
 
     void Start()
     {
         InvokeRepeating("SpawnEnemy", startTime, repeatRate);
         InvokeRepeating("SpawnCoins", startTime2, repeatRate2);
+        gameManagerScript = FindObjectOfType<GameManager>();
     }
     public Vector3 RandomSpawnPosition()
     {
@@ -29,14 +30,20 @@ public class SpawnManager : MonoBehaviour
     public void SpawnEnemy()
     {
         int randomIndex = Random.Range(0, Enemies.Length);
-        Instantiate(Enemies[randomIndex], RandomSpawnPosition(),
+        if (!gameManagerScript.gameOver)
+        {
+            Instantiate(Enemies[randomIndex], RandomSpawnPosition(),
         Enemies[randomIndex].transform.rotation);
+        }
     }
 
     public void SpawnCoins()
     {
         int randomIndex = Random.Range(0, Coins.Length);
-        Instantiate(Coins[randomIndex], RandomSpawnPosition(),
+        if (!gameManagerScript.gameOver)
+        {
+            Instantiate(Coins[randomIndex], RandomSpawnPosition(),
         Coins[randomIndex].transform.rotation);
+        }
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -132042824228818902}
   m_Layer: 0
   m_Name: Coleccionable2
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32bf09d120ac5e47a5d854fd48c8caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 5
+  coinParticle: {fileID: 1855340746554395459, guid: 49011e57640af4346b984abcfb1cf581,
+    type: 3}
 --- !u!65 &-132042824228818902
 BoxCollider:
   m_ObjectHideFlags: 0
