@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
+    //Limites en los que el proyectil se destruye
     private float zLim = 20f;
     private float xLim = 35f;
-    // Update is called once per frame
+    
     void Update()
     {
-
+            //Si el proyectil sale de pantalla, se destruye
             if (transform.position.z > zLim || transform.position.z < -zLim)
             {
                 Destroy(gameObject);
@@ -18,6 +19,5 @@ public class DestroyOutOfBounds : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        
     }
 }
