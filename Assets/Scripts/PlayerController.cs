@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
     private float velocidad = 10f;
     private float turnSpeed = 150f;
 
+    private float leftRange = -32f;
+    private float rightRange = 32f;
+    private float downRange = -18f;
+    private float upRange = 17f;
+
     private float horizontalInput;
     private float verticalInput;
 
@@ -39,6 +44,30 @@ public class PlayerController : MonoBehaviour
            gameObject.transform.rotation);
             Audio.PlayOneShot(blastClip, 1);
 
+        }
+
+        if (transform.position.x < leftRange)
+        {
+            transform.position = new Vector3(leftRange, transform.position.y,
+                transform.position.z);
+        }
+
+        if (transform.position.x > rightRange)
+        {
+            transform.position = new Vector3(rightRange, transform.position.y,
+                transform.position.z);
+        }
+
+        if (transform.position.z < downRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y,
+                downRange);
+        }
+
+        if (transform.position.z > upRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y,
+                upRange);
         }
     }
     private void OnCollisionEnter(Collision otherCollider)

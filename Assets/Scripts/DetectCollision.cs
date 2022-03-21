@@ -37,7 +37,7 @@ public class DetectCollision : MonoBehaviour
         {
             Audio.PlayOneShot(boomClip, 1);
             Destroy(otherCollider.gameObject);
-            gameManagerScript.gameOver = true;
+            gameManagerScript.GameOver();
             Instantiate(explosionParticle, transform.position,
                 explosionParticle.transform.rotation);
         }        
